@@ -6,8 +6,6 @@ on:
   push:
     branches: [ master ]
 
-
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -33,4 +31,4 @@ jobs:
     - name: Install Surge
       run: npm install -g surge 
     - name:  Run surge
-      run: surge ./build projectreact.surge.sh --token ${{ secrets.SURGE_TOKEN2 }}
+      run: surge ./ build projectreact.surge.sh --token ${{ secrets.SURGE_TOKEN2 }}
